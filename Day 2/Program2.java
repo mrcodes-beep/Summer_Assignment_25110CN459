@@ -13,7 +13,7 @@ public class Program2
 
         int reverse = 0;
 
-        while (number != 0)
+        while (num != 0)
         {
             int digit = num % 10;
             reverse = reverse * 10 + digit;
