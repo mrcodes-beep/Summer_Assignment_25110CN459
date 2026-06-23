@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int secretNumber = 7;
+    int guess;
+
+    printf("=== Number Guessing Game ===\n");
+    printf("Guess a number between 1 and 10: ");
+    scanf("%d", &guess);
+
+    if (guess == secretNumber) {
+        printf("Congratulations! You guessed correctly.\n");
+    } else {
+        printf("Wrong guess! The correct number was %d.\n", secretNumber);
+    }
+
+    return 0;
+}
