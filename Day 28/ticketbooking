@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int availableTickets = 50;
+    int choice, tickets;
+
+    while (1) {
+        printf("\n===== Ticket Booking System =====\n");
+        printf("1. Book Ticket\n");
+        printf("2. Check Available Tickets\n");
+        printf("3. Exit\n");
+        printf("Enter Choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter Number of Tickets: ");
+                scanf("%d", &tickets);
+
+                if (tickets <= availableTickets) {
+                    availableTickets -= tickets;
+                    printf("%d Ticket(s) Booked Successfully!\n", tickets);
+                } else {
+                    printf("Not Enough Tickets Available!\n");
+                }
+                break;
+
+            case 2:
+                printf("Available Tickets: %d\n", availableTickets);
+                break;
+
+            case 3:
+                return 0;
+
+            default:
+                printf("Invalid Choice!\n");
+        }
+    }
+}
